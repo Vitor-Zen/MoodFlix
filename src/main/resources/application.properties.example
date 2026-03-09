@@ -1,0 +1,7 @@
+spring.application.name=MoodFlix
+
+# Console
+spring.output.ansi.enabled=always
+
+# Token
+tmdb.api.token=YOUR_TOKEN_HERE
