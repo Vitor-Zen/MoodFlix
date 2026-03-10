@@ -8,9 +8,12 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class RestClientConfig {
 
+    // Inject value from application.properties directly into the field
     @Value("${tmdb.api.token}")
     private String apiToken;
 
+    // Produces an object managed by the Spring Context,
+    // available for dependency injection in any class
     @Bean
     public RestClient restClient(RestClient.Builder builder) {
         return builder
