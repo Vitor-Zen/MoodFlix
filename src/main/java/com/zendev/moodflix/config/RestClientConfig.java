@@ -17,7 +17,7 @@ public class RestClientConfig {
     @Bean
     public RestClient restClient(RestClient.Builder builder) {
         return builder
-                .baseUrl("https://api.themoviedb.org")
+                .baseUrl("https://api.themoviedb.org/3")
                 .defaultHeader("accept", "application/json")
                 .defaultHeader("Authorization", "Bearer " + apiToken)
                 .build();
