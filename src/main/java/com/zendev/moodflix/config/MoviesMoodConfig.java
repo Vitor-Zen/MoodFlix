@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Map;
 
 @Configuration
-@ConfigurationProperties(prefix = "mood") // Maps all properties with "mood" prefix from yaml to this class
-public class MoodConfig {
+@ConfigurationProperties(prefix = "moviesmood") // Maps all properties with "mood" prefix from yaml to this class
+public class MoviesMoodConfig {
 
     private Map<String, String> genres; // Read key and value of yaml file
 
