@@ -18,8 +18,8 @@ public class MovieController {
     }
 
     @GetMapping
-    public List<MovieResponse> getMoviesByMood(@RequestParam String mood, @RequestParam(defaultValue = "1") int page) {
-        return tmdbService.getMoviesByMood(mood, page);
+    public List<MovieResponse> getMoviesByMood(@RequestParam String moviesMood, @RequestParam(defaultValue = "1") int page) {
+        return tmdbService.getMoviesByMood(moviesMood, page);
     }
 
     @GetMapping("/{id}/cast")
