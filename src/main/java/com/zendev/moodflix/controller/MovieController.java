@@ -2,7 +2,7 @@ package com.zendev.moodflix.controller;
 
 import com.zendev.moodflix.dto.CastResponse;
 import com.zendev.moodflix.dto.MovieResponse;
-import com.zendev.moodflix.service.TmdbService;
+import com.zendev.moodflix.service.MovieService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,19 +11,19 @@ import java.util.List;
 @RequestMapping("/movies")
 public class MovieController {
 
-    private final TmdbService tmdbService;
+    private final MovieService movieService;
 
-    public MovieController(TmdbService tmdbService) {
-        this.tmdbService = tmdbService;
+    public MovieController(MovieService movieService) {
+        this.movieService = movieService;
     }
 
     @GetMapping
     public List<MovieResponse> getMoviesByMood(@RequestParam String moviesMood, @RequestParam(defaultValue = "1") int page) {
-        return tmdbService.getMoviesByMood(moviesMood, page);
+        return movieService.getMoviesByMood(moviesMood, page);
     }
 
     @GetMapping("/{id}/cast")
     public List<CastResponse> getCastByMovieId(@PathVariable int id) {
-        return tmdbService.getCastByMovieId(id);
+        return movieService.getCastByMovieId(id);
     }
 }

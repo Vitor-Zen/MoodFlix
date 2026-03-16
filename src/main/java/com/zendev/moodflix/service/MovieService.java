@@ -12,12 +12,12 @@ import org.springframework.web.client.RestClient;
 import java.util.List;
 
 @Service
-public class TmdbService {
+public class MovieService {
 
     private final RestClient restClient;
     private final MoviesMoodConfig moviesMoodConfig;
 
-    public TmdbService(RestClient restClient, MoviesMoodConfig moviesMoodConfig) {
+    public MovieService(RestClient restClient, MoviesMoodConfig moviesMoodConfig) {
         this.restClient = restClient;
         this.moviesMoodConfig = moviesMoodConfig;
     }
