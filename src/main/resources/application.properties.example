@@ -5,3 +5,6 @@ spring.output.ansi.enabled=always
 
 # Token
 tmdb.api.token=YOUR_TOKEN_HERE
+
+# Yaml files
+spring.config.import=classpath:mood.yaml
