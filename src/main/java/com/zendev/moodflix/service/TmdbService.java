@@ -1,6 +1,6 @@
 package com.zendev.moodflix.service;
 
-import com.zendev.moodflix.config.MoodConfig;
+import com.zendev.moodflix.config.MoviesMoodConfig;
 import com.zendev.moodflix.dto.CastResponse;
 import com.zendev.moodflix.dto.CreditsResponse;
 import com.zendev.moodflix.dto.MoviePageResponse;
@@ -15,15 +15,15 @@ import java.util.List;
 public class TmdbService {
 
     private final RestClient restClient;
-    private final MoodConfig moodConfig;
+    private final MoviesMoodConfig moviesMoodConfig;
 
-    public TmdbService(RestClient restClient, MoodConfig moodConfig) {
+    public TmdbService(RestClient restClient, MoviesMoodConfig moviesMoodConfig) {
         this.restClient = restClient;
-        this.moodConfig = moodConfig;
+        this.moviesMoodConfig = moviesMoodConfig;
     }
 
     public List<MovieResponse> getMoviesByMood(String mood, int page) {
-        String genres = moodConfig.getGenres().get(mood); // Gets genreIds from yaml by mood key
+        String genres = moviesMoodConfig.getGenres().get(mood); // Gets genreIds from yaml by mood key
 
         MoviePageResponse response = restClient
                 .get() // HTTP method
@@ -49,7 +49,7 @@ public class TmdbService {
                 .body(new ParameterizedTypeReference<CreditsResponse>() {});
 
             return response != null
-                    ? response.cast().stream().filter(cast -> "Acting".equals(cast.knowForDepartament())) // Filter only actors
+                    ? response.cast().stream().filter(cast -> "Acting".equals(cast.knownForDepartament())) // Filter only actors
                     .filter(cast -> !cast.character().toLowerCase().contains("voice")) // Filter out voice actors
                     .toList()
                     : List.of();
