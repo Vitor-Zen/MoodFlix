@@ -1,7 +1,7 @@
 package com.zendev.moodflix.controller;
 
-import com.zendev.moodflix.dto.CastResponse;
-import com.zendev.moodflix.dto.MovieResponse;
+import com.zendev.moodflix.dto.movie.CastResponse;
+import com.zendev.moodflix.dto.movie.MovieResponse;
 import com.zendev.moodflix.service.MovieService;
 import org.springframework.web.bind.annotation.*;
 

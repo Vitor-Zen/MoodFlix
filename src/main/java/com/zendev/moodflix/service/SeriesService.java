@@ -1,8 +1,8 @@
 package com.zendev.moodflix.service;
 
 import com.zendev.moodflix.config.SeriesMoodConfig;
-import com.zendev.moodflix.dto.SeriesPageResponse;
-import com.zendev.moodflix.dto.SeriesResponse;
+import com.zendev.moodflix.dto.series.SeriesPageResponse;
+import com.zendev.moodflix.dto.series.SeriesResponse;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;

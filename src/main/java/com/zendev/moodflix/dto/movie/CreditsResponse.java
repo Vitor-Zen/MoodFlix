@@ -1,4 +1,4 @@
-package com.zendev.moodflix.dto;
+package com.zendev.moodflix.dto.movie;
 
 import java.util.List;
 
