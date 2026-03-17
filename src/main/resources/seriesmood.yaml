@@ -1,6 +1,5 @@
 seriesmood:
   genres:
-    TO_DE_BOA_APAIXONADO: "10749,35"    # Romance + Romantic Comedy
     E_SE_O_FUTURO_FOSSE_HOJE: "10765"   # Sci-Fi & Fantasy
     VOLTAR_A_SER_CRIANCA: "16"          # Animation
     PASSAR_UM_SUSTO: "27"               # Horror
@@ -8,3 +7,6 @@ seriesmood:
     PRECISO_ASSISTIR_ATE_O_FIM: "9648"  # Mystery
     QUERO_RIR: "35"                     # Comedy
     HEROI_POR_UM_DIA: "10759"           # Action & Adventure
+    COP_POR_UM_DIA: "80"                # Police
+    GREYS_ANATOMY_VIBES: "10766"        # SOAP
+    ALEM_DA_FICCAO: "99"                # Dokumentarfilm
