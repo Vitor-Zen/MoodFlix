@@ -1,6 +1,6 @@
 package com.zendev.moodflix.controller;
 
-import com.zendev.moodflix.dto.SeriesResponse;
+import com.zendev.moodflix.dto.series.SeriesResponse;
 import com.zendev.moodflix.service.SeriesService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

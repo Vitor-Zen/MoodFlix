@@ -1,12 +1,12 @@
-package com.zendev.moodflix.dto;
+package com.zendev.moodflix.dto.movie;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-public record SeriesPageResponse(
+public record MoviePageResponse(
         Integer page,
-        List<SeriesResponse> results,
+        List<MovieResponse> results,
         @JsonProperty("total_pages") Integer totalPages,
         @JsonProperty("total_results") Integer totalResults
 ) {
