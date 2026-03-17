@@ -1,6 +1,8 @@
 package com.zendev.moodflix.service;
 
 import com.zendev.moodflix.config.SeriesMoodConfig;
+import com.zendev.moodflix.dto.CastResponse;
+import com.zendev.moodflix.dto.CreditsResponse;
 import com.zendev.moodflix.dto.series.SeriesPageResponse;
 import com.zendev.moodflix.dto.series.SeriesResponse;
 import org.springframework.core.ParameterizedTypeReference;
@@ -30,5 +32,19 @@ public class SeriesService {
                 .body(new ParameterizedTypeReference<SeriesPageResponse>() {});
 
         return response != null ? response.results() : List.of();
+    }
+
+    public List<CastResponse> getCastBySeriesId(int seriesId) {
+        CreditsResponse response = restClient
+                .get()
+                .uri("/tv/{seriesId}/credits?language=pt-BR", seriesId)
+                .retrieve()
+                .body(new ParameterizedTypeReference<CreditsResponse>() {});
+
+        return response != null
+                ? response.cast().stream().filter(cast -> "Acting".equals(cast.knownForDepartament()))
+                .filter(cast -> !cast.character().toLowerCase().contains("voice"))
+                .toList()
+                :List.of();
     }
 }
