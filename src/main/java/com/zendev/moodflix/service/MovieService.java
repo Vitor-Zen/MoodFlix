@@ -1,8 +1,8 @@
 package com.zendev.moodflix.service;
 
 import com.zendev.moodflix.config.MoviesMoodConfig;
-import com.zendev.moodflix.dto.movie.CastResponse;
-import com.zendev.moodflix.dto.movie.CreditsResponse;
+import com.zendev.moodflix.dto.CastResponse;
+import com.zendev.moodflix.dto.CreditsResponse;
 import com.zendev.moodflix.dto.movie.MoviePageResponse;
 import com.zendev.moodflix.dto.movie.MovieResponse;
 import org.springframework.core.ParameterizedTypeReference;
