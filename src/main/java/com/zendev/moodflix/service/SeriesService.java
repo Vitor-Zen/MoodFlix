@@ -1,10 +1,11 @@
 package com.zendev.moodflix.service;
 
-import com.zendev.moodflix.config.SeriesMoodConfig;
+import com.zendev.moodflix.config.tmdb.SeriesMoodConfig;
 import com.zendev.moodflix.dto.CastResponse;
 import com.zendev.moodflix.dto.CreditsResponse;
 import com.zendev.moodflix.dto.series.SeriesPageResponse;
 import com.zendev.moodflix.dto.series.SeriesResponse;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -17,7 +18,7 @@ public class SeriesService {
     private final RestClient restClient;
     private final SeriesMoodConfig seriesMoodConfig;
 
-    public SeriesService(RestClient restClient, SeriesMoodConfig seriesMoodConfig) {
+    public SeriesService(@Qualifier("tmdbRestClient") RestClient restClient, SeriesMoodConfig seriesMoodConfig) {
         this.restClient = restClient;
         this.seriesMoodConfig = seriesMoodConfig;
     }
