@@ -1,10 +1,11 @@
 package com.zendev.moodflix.service;
 
-import com.zendev.moodflix.config.MoviesMoodConfig;
+import com.zendev.moodflix.config.tmdb.MoviesMoodConfig;
 import com.zendev.moodflix.dto.CastResponse;
 import com.zendev.moodflix.dto.CreditsResponse;
 import com.zendev.moodflix.dto.movie.MoviePageResponse;
 import com.zendev.moodflix.dto.movie.MovieResponse;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -17,7 +18,7 @@ public class MovieService {
     private final RestClient restClient;
     private final MoviesMoodConfig moviesMoodConfig;
 
-    public MovieService(RestClient restClient, MoviesMoodConfig moviesMoodConfig) {
+    public MovieService(@Qualifier("tmdbRestClient") RestClient restClient, MoviesMoodConfig moviesMoodConfig) {
         this.restClient = restClient;
         this.moviesMoodConfig = moviesMoodConfig;
     }

@@ -7,4 +7,4 @@ spring.output.ansi.enabled=always
 tmdb.api.token=YOUR_TOKEN_HERE
 
 # Yaml files
-spring.config.import=classpath:moviesmood.yaml, classpath:seriesmood.yaml
+spring.config.import=classpath:moviesmood.yaml, classpath:seriesmood.yaml, classpath:animesmood.yaml
