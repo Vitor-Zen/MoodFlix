@@ -1,10 +1,10 @@
 package com.zendev.moodflix.service;
 
 import com.zendev.moodflix.config.tmdb.SeriesMoodConfig;
-import com.zendev.moodflix.dto.CastResponse;
-import com.zendev.moodflix.dto.CreditsResponse;
-import com.zendev.moodflix.dto.series.SeriesPageResponse;
-import com.zendev.moodflix.dto.series.SeriesResponse;
+import com.zendev.moodflix.dto.tmdb.CastResponse;
+import com.zendev.moodflix.dto.tmdb.CreditsResponse;
+import com.zendev.moodflix.dto.tmdb.series.SeriesPageResponse;
+import com.zendev.moodflix.dto.tmdb.series.SeriesResponse;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
