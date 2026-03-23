@@ -1,4 +1,4 @@
-package com.zendev.moodflix.dto;
+package com.zendev.moodflix.dto.tmdb;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
