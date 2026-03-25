@@ -2,6 +2,7 @@ package com.zendev.moodflix.service;
 
 import com.zendev.moodflix.config.jikan.AnimesMoodConfig;
 import com.zendev.moodflix.dto.jikan.AnimePageResponse;
+import com.zendev.moodflix.dto.jikan.AnimeRecommendationPageResponse;
 import com.zendev.moodflix.dto.jikan.AnimeResponse;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class AnimesService {
@@ -50,14 +52,16 @@ public class AnimesService {
     }
 
     private List<AnimeResponse> getAnimeRecommendationsByMalId(int malId) {
-        AnimePageResponse response = restClient
+        AnimeRecommendationPageResponse response = restClient
                 .get()
                 .uri("/anime/{malId}/recommendations", malId)
                 .retrieve()
-                .body(new ParameterizedTypeReference<AnimePageResponse>() {});
+                .body(new ParameterizedTypeReference<AnimeRecommendationPageResponse>() {});
 
         return response != null
-                ? response.data()
+                ? response.data().stream()
+                .map(AnimeRecommendationPageResponse.AnimeRecommendationResponse::entry)
+                .collect(Collectors.toList())
                 : List.of();
     }
 }
