@@ -1,11 +1,9 @@
 package com.zendev.moodflix.controller;
 
+import com.zendev.moodflix.dto.tmdb.CastResponse;
 import com.zendev.moodflix.dto.tmdb.series.SeriesResponse;
 import com.zendev.moodflix.service.SeriesService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,4 +21,7 @@ public class SeriesController {
     public List<SeriesResponse> getSeriesByMood(@RequestParam String seriesMood, @RequestParam(defaultValue = "1") int page){
         return seriesService.getSeriesByMood(seriesMood, page);
     }
+
+    @GetMapping("/{id}/cast")
+    public List<CastResponse> getCastBySeriesId(@PathVariable int id){ return seriesService.getCastBySeriesId(id); }
 }
