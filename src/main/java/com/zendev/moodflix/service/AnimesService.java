@@ -49,7 +49,7 @@ public class AnimesService {
         return getAnimeRecommendationsByMalId(malId);
     }
 
-    public List<AnimeResponse> getAnimeRecommendationsByMalId(int malId) {
+    private List<AnimeResponse> getAnimeRecommendationsByMalId(int malId) {
         AnimePageResponse response = restClient
                 .get()
                 .uri("/anime/{malId}/recommendations", malId)
