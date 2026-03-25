@@ -1,14 +1,15 @@
 animesmood:
   genres:
-    HEROI_POR_UM_DIA: "1,2,10,62,27"     # Action, Adventure, Fantasy, Isekai, Shounen
+    HEROI_POR_UM_DIA: "1,27"             # Action, Shounen
     REFLETINDO_SOBRE_A_VIDA: "63"        # Iyashikei
     ADRENALINA_A_MIL: "17"               # Martial Arts
     SALVAR_VIDAS: "67"                   # Medical
-    DESVENDANDO_CRIMES: "7,39,40"        # Mystery, Detective, Psychological
-    SUANDO_A_CAMISA: "30,77,54"          # Sports, Team Sports, Combat Sports
-    PASSAR_UM_SUSTO: "14,37,41"          # Horror, Supernatural, Suspense
-    QUERO_RIR: "4,20"                    # Comedy, Parody
-    TO_DE_BOA_APAIXONADO: "22,36"        # Romance, Slice of Life
-    E_SE_O_FUTURO_FOSSE_HOJE: "24,29"    # Sci-Fi, Space
-    VOLTAR_A_SER_CRIANCA: "10,62"        # Fantasy, Isekai
-    TEMPO_DE_BATALHA: "21,13,38"         # Samurai, Historical, Military
+    DESVENDANDO_CRIMES: "7,39"           # Mystery, Detective
+    SUANDO_A_CAMISA: "30"                # Sports
+    PASSAR_UM_SUSTO: "14"                # Horror
+    QUERO_RIR: "4"                       # Comedy
+    TO_DE_BOA_APAIXONADO: "22"           # Romance
+    E_SE_O_FUTURO_FOSSE_HOJE: "24"       # Sci-Fi
+    VIAGEM_ESPACIAL: "29"                # Space
+    VOLTAR_A_SER_CRIANCA: "10"           # Fantasy
+    TEMPO_DE_BATALHA: "13"               # Military
