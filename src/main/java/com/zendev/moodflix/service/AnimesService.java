@@ -33,26 +33,31 @@ public class AnimesService {
         return response != null ? response.data() : List.of();
     }
 
-    public List<AnimeResponse> searchAnimesByName(String name) {
+    public List<AnimeResponse> getRecommendationsByAnimeName(String name) {
         AnimePageResponse response = restClient
                 .get()
                 .uri("/anime?q={name}&sfw=true&type=tv", name)
                 .retrieve()
                 .body(new ParameterizedTypeReference<AnimePageResponse>() {});
 
-        return response!= null
-                ? response.data().stream().filter(anime -> "TV".equals(anime.type()) || "Movie".equals(anime.type()))
-                .toList()
-                : List.of();
+        if (response == null || response.data().isEmpty()){
+            return List.of();
+        }
+
+        int malId = response.data().get(0).malId();
+
+        return getAnimeRecommendationsByMalId(malId);
     }
 
-    public List<AnimeResponse> getAnimeRecommendations(int malId) {
+    public List<AnimeResponse> getAnimeRecommendationsByMalId(int malId) {
         AnimePageResponse response = restClient
                 .get()
                 .uri("/anime/{malId}/recommendations", malId)
                 .retrieve()
                 .body(new ParameterizedTypeReference<AnimePageResponse>() {});
 
-        return response != null ? response.data() : List.of();
+        return response != null
+                ? response.data()
+                : List.of();
     }
 }
