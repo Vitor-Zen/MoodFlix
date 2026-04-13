@@ -6,7 +6,6 @@ public record MovieResponse(
         Integer id,
         String overview,
         String title,
-        @JsonProperty("original_title") String originalTitle,
         @JsonProperty("vote_average") Double voteAverage
         ) {
 }
