@@ -1,0 +1,18 @@
+moviesmood:
+  genres:
+    "HEROI_POR_UM_DIA": "28" # Action
+    "VIAJAR_NA_MAIONESE": "12, 878" # Adventure and Science Fiction
+    "VOLTAR_A_SER_CRIANCA": "16" # Animation
+    "RIR_SEM_PARAR": "35" # Comedy
+    "MOMENTO_FAMILIA": "10751" # Family
+    "INVESTIGAR_SEM_SAIR_DO_SOFA": "80" # Crimes
+    "HISTORIAS_REAIS": "99" # Documentary
+    "TO_DE_BOA_APAIXONADO": "10749" # Romance
+    "RIR_COM_A_GATA": "10749, 35" # Romance and Comedy
+    "SOFRENDO_COM_A_GATA": "10749, 18" # Romance and Drama
+    "UM_SUSTO_BEM_DADO": "27" # Horror
+    "TENSAO_A_TODO_MOMENTO": "27, 53" # Horror and Thriller
+    "MOMENTO_DE_GUERRA": "10752" # War
+    "COWBOY_POR_UM_INSTANTE": "37" # Western
+    "CANTAROLAR_SEM_PARAR": "10402" # Musik
+    "SCOOBY_DOO_MODE": "9648" # Mystery

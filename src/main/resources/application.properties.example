@@ -1,1 +1,8 @@
+# Application name
 spring.application.name=oficialmoodflix
+
+# TMDB KEY
+tmdb.key=your_key
+
+# Yalm files
+spring.config.import=classpath:moods/moviesmood.yaml
